@@ -4,10 +4,32 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
+import { navLinks } from "@/utils/data";
+
+const capitalizeWords = (inputString) => {
+  if (!inputString) return "";
+  const word = inputString.split(" ");
+  // Check if there are more than two words
+  if (word.length > 2) {
+    // If more than two words, trim the array to the first two words
+    word.length = 2;
+  }
+  const capitalizeWord = word.map((word) => {
+    if (word.length > 0) {
+      return word[0].toUpperCase() + word.slice(1).toLowerCase();
+    } else {
+      return word;
+    }
+  });
+  const logoName = capitalizeWord.join(" ");
+  return logoName;
+};
 
 const Navbar = () => {
   const { status, data: session } = useSession();
   const [toggle, setToggle] = useState(false);
+  const inputString = session?.user?.name;
+  const capitalizedString = capitalizeWords(inputString);
   const router = useRouter();
   return (
     <>
@@ -24,16 +46,27 @@ const Navbar = () => {
                   className="object-contain"
                 />
                 <p className="font-semibold text-lg text-black tracking-wide">
-                  {session?.user?.name}
+                  {status === "authenticated" ? capitalizedString : "Suhail"}
                 </p>
               </Link>
+            </div>
+            <div>
+              <ul className="flex items-center gap-7">
+                {navLinks.map((item) => (
+                  <li key={item.id}>
+                    <Link href={item.url} className="nav_links">
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
             <div>
               {status === "authenticated" ? (
                 <div className="relative">
                   <div className="border-[3px] border-transparent rounded-full p-[2px] hover:border-gray-400  transition duration-200">
                     <Image
-                      src="/logo.svg"
+                      src={session?.user?.image || "/logo.svg"}
                       alt="logo"
                       width={50}
                       height={50}
@@ -82,7 +115,7 @@ const Navbar = () => {
                       <button
                         type="button"
                         className="mt-5 w-full black_btn rounded-full border border-black bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm font-inter flex items-center justify-center"
-                        onClick={() => signOut()}
+                        onClick={() => signOut({ callbackUrl: "/sign-in" })}
                       >
                         Sign Out
                       </button>

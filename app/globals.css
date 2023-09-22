@@ -10,3 +10,7 @@
     animation-delay: 4s;
   }
 }
+
+.nav_links {
+  @apply text-base block relative font-medium hover:bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 hover:bg-clip-text hover:text-transparent transition-all after:transition-all after:duration-500 duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:m-auto after:w-0 after:text-transparent after:bg-gradient-to-r after:from-amber-500 after:via-orange-600 after:to-yellow-500 after:h-[2px] hover:after:w-full max-md:hidden;
+}

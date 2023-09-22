@@ -27,6 +27,14 @@ module.exports = {
         },
       },
     },
+    container: {
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "3rem",
+        xl: "4rem",
+      },
+    },
   },
   plugins: [],
 };

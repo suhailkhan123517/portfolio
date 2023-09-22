@@ -42,8 +42,8 @@ const Login = () => {
           <div className="absolute top-12 -left-16 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob "></div>
           <div className="absolute top-12 -right-16 w-96 h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
           <div className="absolute top-72 left-20 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
-          <div className="m-8 relative space-y-4">
-            <div className="bg-white py-6 px-10  rounded-3xl">
+          <div className="m-8 relative space-y-4 ">
+            <div className="bg-white py-6 px-10 shadow-2xl  rounded-3xl">
               <div className="flex items-center gap-5">
                 <Image
                   src="/logo.svg"
@@ -61,7 +61,12 @@ const Login = () => {
               </h1>
               <p className="text-lg text-gray-600">to continue to Portfolio</p>
 
-              <button className="mt-3 border border-gray-300 py-2 px-4 w-full flex items-center justify-between rounded-md hover:bg-gray-200 transition duration-300 group">
+              <button
+                onClick={() => {
+                  signIn("github", { callbackUrl: "/" });
+                }}
+                className="mt-3 border border-gray-300 py-2 px-4 w-full flex items-center justify-between rounded-md hover:bg-gray-200 transition duration-300 group"
+              >
                 <Image
                   src="/github.svg"
                   width={20}
@@ -72,7 +77,12 @@ const Login = () => {
                 <span>Continue with Github</span>
                 <BsArrowRight className="opacity-0 group-hover:opacity-100 transition duration-300 group group-hover:translate-x-2" />
               </button>
-              <button className="mt-3 border border-gray-300 py-2 px-4 w-full flex items-center justify-between rounded-md hover:bg-gray-200 transition duration-300 group">
+              <button
+                onClick={() => {
+                  signIn("google", { callbackUrl: "/" });
+                }}
+                className="mt-3 border border-gray-300 py-2 px-4 w-full flex items-center justify-between rounded-md hover:bg-gray-200 transition duration-300 group"
+              >
                 <Image
                   src="/google.svg"
                   width={20}
