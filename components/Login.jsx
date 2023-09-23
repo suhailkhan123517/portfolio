@@ -37,7 +37,7 @@ const Login = () => {
   };
   return (
     <>
-      <div className="flex bg-gray-50 items-center justify-center w-full min-h-screen px-16">
+      <div className="flex bg-gray-50 items-center justify-center w-full min-h-screen px-16 ">
         <div className="w-full max-w-lg relative">
           <div className="absolute top-12 -left-16 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob "></div>
           <div className="absolute top-12 -right-16 w-96 h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>

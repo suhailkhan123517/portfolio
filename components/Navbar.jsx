@@ -33,7 +33,7 @@ const Navbar = () => {
   const router = useRouter();
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-50">
+      <nav className="fixed top-0 left-0 w-full z-50 bg-white">
         <div className="container  mx-auto">
           <div className="flex items-center justify-between py-3">
             <div>
