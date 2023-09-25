@@ -19,11 +19,11 @@
 }
 
 .head_text {
-  @apply mt-5 text-3xl font-extrabold leading-[1.15] text-black sm:text-4xl;
+  @apply text-3xl font-extrabold leading-[1.15] text-black lg:text-4xl;
 }
 
 .orange_gradient {
-  @apply bg-gradient-to-r  from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent text-5xl font-extrabold leading-[1.15]  sm:text-6xl;
+  @apply bg-gradient-to-r  from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent text-4xl lg:text-5xl font-extrabold leading-[1.15]  xl:text-6xl;
 }
 
 .green_gradient {
@@ -31,9 +31,33 @@
 }
 
 .blue_gradient {
-  @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent text-3xl font-extrabold leading-[1.15]  sm:text-4xl;
+  @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent text-2xl font-extrabold leading-[1.15]  lg:text-4xl;
 }
 
 .desc {
-  @apply mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl;
+  @apply lg:mt-5 mt-3 text-base text-gray-600 lg:text-xl max-w-2xl;
+}
+
+.scroll_btn::before {
+  position: absolute;
+  content: "";
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 5px;
+  height: 6px;
+  width: 6px;
+  background: #333;
+  border-radius: 50%;
+  animation: move-down 2s infinite;
+}
+
+@keyframes move-down {
+  80% {
+    opacity: 0.5s;
+  }
+  100% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
 }

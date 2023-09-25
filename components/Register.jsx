@@ -70,16 +70,16 @@ const Register = () => {
 
   return (
     <>
-      <div className="flex bg-gray-50 items-center justify-center w-full h-screen px-16">
+      <div className="flex bg-gray-50 items-center justify-center w-full mt-12 sm:px-16">
         <div className="absolute w-full h-full top-0 left-0 bottom-0 right-0">
           <ParticlesContainer />
         </div>
         <div className="w-full max-w-lg relative">
-          <div className="absolute top-12 -left-12 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob "></div>
-          <div className="absolute top-12 -right-12 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-          <div className="absolute top-60 -left-12 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
-          <div className="absolute top-60 -right-12 w-72 h-72 bg-green-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-6000"></div>
-          <div className="m-8 relative space-y-4">
+          <div className="absolute top-12 -sm:left-12  left-0 sm:w-72 sm:h-72 w-32 h-32 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob "></div>
+          <div className="absolute top-12 -sm:right-12  right-10 sm:w-72 sm:h-72 w-32 h-32 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+          <div className="absolute top-60 -sm:left-12 left-0  sm:w-72 sm:h-72 w-32 h-32 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+          <div className="absolute top-60 -sm:right-12  right-10 sm:w-72 sm:h-72 w-32 h-32 bg-green-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-6000"></div>
+          <div className="sm:m-8 m-4 relative space-y-4">
             <div className="bg-white py-4 px-10  rounded-3xl shadow-2xl">
               <h1 className="font-semibold text-2xl text-black tracking-wide">
                 Create your account

@@ -33,7 +33,7 @@ const Navbar = () => {
   const router = useRouter();
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-50 bg-white">
+      <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/30">
         <div className="container  mx-auto">
           <div className="flex items-center justify-between py-3">
             <div>
@@ -51,7 +51,7 @@ const Navbar = () => {
               </Link>
             </div>
             <div>
-              <ul className="flex items-center gap-7">
+              <ul className="flex items-center gap-7 max-lg:hidden">
                 {navLinks.map((item) => (
                   <li key={item.id}>
                     <Link href={item.url} className="nav_links">
