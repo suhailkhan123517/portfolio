@@ -85,9 +85,9 @@ const Hero = () => {
                 transition={{ duration: 1, ease: "easeInOut" }}
                 className="absolute bottom-0 right-[10%]"
               >
-                <div className="relative w-[600px] h-[700px]">
+                <div className="relative w-[500px] border-[1px] h-[500px]">
                   <Image
-                    src="/hero_img.png"
+                    src="/banner_hero.png"
                     fill={true}
                     alt="Portfolio Banner"
                   />

@@ -7,6 +7,7 @@ import Link from "next/link";
 import { signIn } from "next-auth/react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import ParticlesContainer from "./ParticlesContainer";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -37,26 +38,31 @@ const Login = () => {
   };
   return (
     <>
-      <div className="flex bg-gray-50 items-center justify-center w-full min-h-screen px-16 ">
+      <div className="flex bg-gray-50 items-center justify-center w-full h-screen px-16 ">
+        <div className="absolute w-full h-full top-0 left-0 bottom-0 right-0">
+          <ParticlesContainer />
+        </div>
         <div className="w-full max-w-lg relative">
-          <div className="absolute top-12 -left-16 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob "></div>
-          <div className="absolute top-12 -right-16 w-96 h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-          <div className="absolute top-72 left-20 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+          <div className="absolute top-12 -left-12 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob "></div>
+          <div className="absolute top-12 -right-12 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+          <div className="absolute top-60 -left-12 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+          <div className="absolute top-60 -right-12 w-72 h-72 bg-green-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-6000"></div>
+
           <div className="m-8 relative space-y-4 ">
-            <div className="bg-white py-6 px-10 shadow-2xl  rounded-3xl">
+            <div className="bg-white py-4 px-10 shadow-2xl  rounded-3xl">
               <div className="flex items-center gap-5">
                 <Image
                   src="/logo.svg"
                   alt="logo"
-                  width={35}
-                  height={35}
+                  width={30}
+                  height={30}
                   className="object-contain"
                 />
-                <span className="font-satoshi font-semibold text-2xl text-black tracking-wide">
+                <span className="font-satoshi font-semibold text-xl text-black tracking-wide">
                   Portfolio
                 </span>
               </div>
-              <h1 className="font-satoshi font-semibold text-xl text-black tracking-wide mt-3">
+              <h1 className="font-satoshi font-semibold text-xl text-black tracking-wide mt-2">
                 Sign in
               </h1>
               <p className="text-lg text-gray-600">to continue to Portfolio</p>
