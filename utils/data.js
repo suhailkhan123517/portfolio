@@ -113,3 +113,55 @@ export const experience = [
     year: "7 Months",
   },
 ];
+
+export const services = [
+  {
+    id: 1,
+    icon: "BiCodeAlt",
+    title: "Web Development",
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe iusto voluptas nemo totam quas ducimus",
+  },
+  {
+    id: 2,
+    icon: "AiFillMobile",
+    title: "App Development",
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe iusto voluptas nemo totam quas ducimus",
+  },
+  {
+    id: 3,
+    icon: "AiOutlineSearch",
+    title: "SEO Development",
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe iusto voluptas nemo totam quas ducimus",
+  },
+];
+
+export const projectData = [
+  {
+    id: 1,
+    title: "React Portfolio Website",
+    desc: "Description",
+    img: "/cancari_desktop.jpg",
+    tag: ["All", "Web"],
+  },
+  {
+    id: 2,
+    title: "React Portfolio Website 2",
+    desc: "Description",
+    img: "/thelastbite_desktop_portfolio.jpg",
+    tag: ["All", "Mobile"],
+  },
+  {
+    id: 3,
+    title: "React Portfolio Website 3",
+    desc: "Description",
+    img: "/vallam.jpg",
+    tag: ["All", "Mobile"],
+  },
+  {
+    id: 4,
+    title: "React Portfolio Website 4",
+    desc: "Description",
+    img: "/spear.jpg",
+    tag: ["All", "Web"],
+  },
+];

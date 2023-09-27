@@ -1,6 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
 
 @layer utilities {
   .animation-delay-2000 {
@@ -35,7 +40,7 @@
 }
 
 .desc {
-  @apply lg:mt-5 mt-3 text-base text-gray-600 lg:text-xl max-w-2xl;
+  @apply lg:mt-5 mt-3 text-base text-gray-600 lg:text-xl;
 }
 
 .scroll_btn::before {
