@@ -3,12 +3,12 @@ import { AiFillGithub, AiFillEye } from "react-icons/ai";
 const ProjectCard = ({ imgUrl, title, desc }) => {
   return (
     <>
-      <div>
+      <div className="p-2 bg-white rounded-xl">
         <div
           className="group h-52 md:h-60 rounded-t-xl relative"
           style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
         >
-          <div className="overlay absolute rounded-t-xl  top-0 left-0 w-full h-full bg-black/50 bg-opacity-0 hidden group-hover:grid place-items-center group-hover:bg-opacity-80 transition-all duration-500">
+          <div className="overlay absolute rounded-t-xl  top-0 left-0 w-full h-full bg-black/50 bg-opacity-0 hidden group-hover:grid place-items-center group-hover:bg-opacity-80 transition-all group-hover:duration-500">
             <div className="flex items-center gap-3">
               <Link
                 href="/"

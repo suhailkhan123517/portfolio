@@ -165,3 +165,97 @@ export const projectData = [
     tag: ["All", "Web"],
   },
 ];
+
+export const filterCatagories = [
+  {
+    id: 1,
+    tagName: "Web",
+  },
+  {
+    id: 1,
+    tagName: "Mobile",
+  },
+];
+
+export const testimonial = [
+  {
+    id: 1,
+    name: "Satya Nadella",
+    country: "United States",
+    description:
+      "Satya Narayana Nadella is an Indian-American business executive. He is the CEO of Microsoft, one of the world's largest technology companies.",
+    avatar: "https://example.com/avatar/satya_nadella.jpg",
+  },
+  {
+    id: 2,
+    name: "Tim Cook",
+    country: "United States",
+    description:
+      "Timothy Donald Cook is an American business executive. He is the CEO of Apple Inc., a leading technology company known for its innovative products.",
+    avatar: "https://example.com/avatar/tim_cook.jpg",
+  },
+  {
+    id: 3,
+    name: "Sundar Pichai",
+    country: "United States",
+    description:
+      "Pichai Sundararajan, known as Sundar Pichai, is an Indian-American business executive. He serves as the CEO of Alphabet Inc., Google's parent company.",
+    avatar: "https://example.com/avatar/sundar_pichai.jpg",
+  },
+  {
+    id: 4,
+    name: "Arvind Krishna",
+    country: "United States",
+    description:
+      "Arvind Krishna is an American business executive. He is the Chairman and CEO of IBM, a multinational technology company.",
+    avatar: "https://example.com/avatar/arvind_krishna.jpg",
+  },
+  {
+    id: 5,
+    name: "Shantanu Narayen",
+    country: "United States",
+    description:
+      "Shantanu Narayen is an Indian-American business executive. He serves as the CEO of Adobe Inc., a software and technology company.",
+    avatar: "https://example.com/avatar/shantanu_narayen.jpg",
+  },
+  {
+    id: 6,
+    name: "Mark Zuckerberg",
+    country: "United States",
+    description:
+      "Mark Zuckerberg is an American technology entrepreneur. He co-founded Facebook and currently serves as its CEO and Chairman.",
+    avatar: "https://example.com/avatar/mark_zuckerberg.jpg",
+  },
+  {
+    id: 7,
+    name: "Jack Dorsey",
+    country: "United States",
+    description:
+      "Jack Dorsey is an American technology entrepreneur. He co-founded Twitter and served as its CEO until stepping down in 2021.",
+    avatar: "https://example.com/avatar/jack_dorsey.jpg",
+  },
+  {
+    id: 8,
+    name: "Chuck Robbins",
+    country: "United States",
+    description:
+      "Chuck Robbins is an American business executive. He is the Chairman and CEO of Cisco Systems, a multinational technology company.",
+    avatar: "https://example.com/avatar/chuck_robbins.jpg",
+  },
+  {
+    id: 9,
+    name: "Jen-Hsun Huang",
+    country: "United States",
+    description:
+      "Jensen Huang is a Taiwanese-American business executive. He co-founded Nvidia Corporation and serves as its CEO and President.",
+    avatar: "https://example.com/avatar/jen-hsun_huang.jpg",
+  },
+  {
+    id: 10,
+    name: "Thomas Kurian",
+    country: "United States",
+    description:
+      "Thomas Kurian is an American business executive. He is the CEO of Google Cloud, a division of Alphabet Inc.",
+    avatar: "https://example.com/avatar/thomas_kurian.jpg",
+  },
+];
