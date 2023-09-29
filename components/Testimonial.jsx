@@ -1,5 +1,5 @@
 "use client";
-import { testimonial } from "@/utils/data";
+import { logoSlide, testimonial } from "@/utils/data";
 import Image from "next/image";
 import React, { useState } from "react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";

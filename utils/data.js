@@ -259,3 +259,62 @@ export const testimonial = [
     avatar: "https://example.com/avatar/thomas_kurian.jpg",
   },
 ];
+
+export const logoSlide = [
+  {
+    id: 1,
+    img: "/adidas.png",
+  },
+  {
+    id: 2,
+    img: "/amazon.png",
+  },
+  {
+    id: 3,
+    img: "/asus.png",
+  },
+  {
+    id: 4,
+    img: "/bolt.png",
+  },
+  {
+    id: 5,
+    img: "/nb.png",
+  },
+  {
+    id: 6,
+    img: "/skype.png",
+  },
+  {
+    id: 7,
+    img: "/spotify.png",
+  },
+  {
+    id: 8,
+    img: "/adidas.png",
+  },
+  {
+    id: 9,
+    img: "/amazon.png",
+  },
+  {
+    id: 10,
+    img: "/asus.png",
+  },
+  {
+    id: 11,
+    img: "/bolt.png",
+  },
+  {
+    id: 12,
+    img: "/nb.png",
+  },
+  {
+    id: 13,
+    img: "/skype.png",
+  },
+  {
+    id: 14,
+    img: "/spotify.png",
+  },
+];

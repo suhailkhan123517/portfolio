@@ -48,16 +48,16 @@ const About = () => {
                   Skills
                 </TabButton>
                 <TabButton
-                  selectTab={() => handleChange("educations")}
-                  active={tab === "educations"}
-                >
-                  Educations
-                </TabButton>
-                <TabButton
                   selectTab={() => handleChange("experience")}
                   active={tab === "experience"}
                 >
                   Experience
+                </TabButton>
+                <TabButton
+                  selectTab={() => handleChange("educations")}
+                  active={tab === "educations"}
+                >
+                  Educations
                 </TabButton>
               </div>
               <div className="mt-2">
