@@ -8,14 +8,14 @@ const Contact = () => {
           <h1 className="head_text text-center mb-10">
             Take A Coffee & Chat With Me
           </h1>
-          <div className="flex items-center gap-10 justify-center ">
-            <div className="flex items-center p-5  gap-5 rounded-xl bg-[#fef4f5] shadow-lg hover:scale-110 transition duration-300 hover:shadow-xl cursor-pointer">
+          <div className="flex items-center md:flex-row flex-col md:gap-10 gap-6 justify-center ">
+            <div className="flex items-center md:p-5 p-3  gap-5 rounded-xl bg-[#fef4f5] shadow-lg hover:scale-110 transition duration-300 hover:shadow-xl cursor-pointer max-md:w-full">
               <div className="relative w-12 h-12">
                 <Image src="/email.png" alt="email logo" fill />
               </div>
               <div>skhan282290@gmail.com</div>
             </div>
-            <div className="flex items-center p-5 gap-5 rounded-xl bg-white shadow-lg hover:scale-110 transition duration-300 hover:shadow-xl cursor-pointer">
+            <div className="flex items-center md:p-5 p-3 gap-5 rounded-xl bg-white shadow-lg hover:scale-110 transition duration-300 hover:shadow-xl cursor-pointer max-md:w-full">
               <div className="relative w-12 h-12">
                 <Image src="/mobile.png" alt="email logo" fill />
               </div>
@@ -41,7 +41,7 @@ const Contact = () => {
                   rows="3"
                   className="py-2 px-4 outline-[#313bac] text-lg rounded-lg"
                 ></textarea>
-                <button className="py-2 px-4 bg-[#313bac] text-lg rounded-lg text-white hover:bg-[#3d448d]">
+                <button className="py-2 px-4 bg-[#313bac] text-lg rounded-lg text-white hover:bg-[#434db6]">
                   Send Message
                 </button>
               </form>

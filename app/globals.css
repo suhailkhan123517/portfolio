@@ -40,7 +40,7 @@ body {
 }
 
 .desc {
-  @apply lg:mt-5 mt-3 text-base text-gray-600 lg:text-xl;
+  @apply lg:mt-5 mt-3 text-gray-600 xl:text-xl lg:text-lg text-sm;
 }
 
 .scroll_btn::before {

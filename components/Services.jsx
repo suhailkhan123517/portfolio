@@ -4,7 +4,7 @@ import { BiCodeAlt, BiRightArrowAlt } from "react-icons/bi";
 const Services = () => {
   return (
     <>
-      <section className="min-h-screen grid place-items-center">
+      <section className="min-h-screen py-10 grid place-items-center">
         <div className="container mx-auto">
           <h2 className="head_text text-center">My Services</h2>
           <p className="desc text-center">
@@ -12,12 +12,12 @@ const Services = () => {
             esse nemo explicabo quas <br /> totam molestiae ipsam consequatur
             itaque animi cum.{" "}
           </p>
-          <div className="grid grid-cols-3 gap-10 mt-20 relative">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 xl:mt-20 mt-10 relative">
             {services.map((item) => (
               <>
                 <div
                   key={item.id}
-                  className="group relative border border-gray-300 bg-[#edf2f8] p-5 rounded-xl flex flex-col gap-4 shadow-xl hover:border-blue-600  transition duration-200"
+                  className="group relative border border-gray-300 bg-[#edf2f8] xl:p-5 p-4 rounded-xl flex flex-col xl:gap-4 gap-3 shadow-xl hover:border-blue-600  transition duration-200"
                 >
                   {item.icon === "BiCodeAlt" && (
                     <BiCodeAlt className="text-5xl font-bold" />

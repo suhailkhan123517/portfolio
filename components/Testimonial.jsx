@@ -20,25 +20,26 @@ const Testimonial = () => {
           <div className="flex items-center justify-center flex-col">
             {testimonialsData.length && (
               <>
-                <div className="p-10 bg-[#edf2f8] shadow-xl flex items-center flex-row gap-10 min-h-[250px] max-w-3xl rounded-xl">
-                  <div className="w-28">
-                    <div className="relative w-20 h-20 border-gray-200 border rounded-full ">
+                <div className="md:p-10 p-3 bg-[#edf2f8] shadow-xl flex items-center justify-center md:flex-row  flex-col md:gap-10 gap-5 min-h-[250px] max-w-3xl rounded-xl">
+                  <div className="md:w-28 w-14 ">
+                    <div className="relative md:w-20 md:h-20 w-12 h-12 rounded-full ">
                       <Image
-                        src="/css.png"
+                        src={testimonialsData[currentIndex].avatar}
                         alt="testimonial image"
                         fill={true}
+                        className="rounded-full"
                       />
                     </div>
                   </div>
 
-                  <div className="flex flex-col gap-10">
+                  <div className="flex flex-col md:gap-10 gap-6">
                     <p> {testimonialsData[currentIndex].description} </p>
                     <div>
-                      <p className="text-xl">
+                      <p className="md:text-xl  text-lg">
                         {" "}
                         {testimonialsData[currentIndex].name}{" "}
                       </p>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 max-md:text-sm">
                         {" "}
                         {testimonialsData[currentIndex].country}{" "}
                       </p>

@@ -8,7 +8,7 @@ const TabButton = ({ active, selectTab, children }) => {
     <>
       <button onClick={selectTab}>
         <span
-          className={`text-lg font-medium px-4 rounded-md py-2 ${buttonClasses}`}
+          className={`xl:text-lg lg:text-base text-sm font-medium xl:px-4 lg:px-3 px-2 rounded-md lg:py-2 py-1 ${buttonClasses}`}
         >
           {children}
         </span>

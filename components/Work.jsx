@@ -42,7 +42,7 @@ const Work = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-5 mt-16">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2  grid-cols-1 gap-5 mt-16">
             {filterProject.map((item) => (
               <ProjectCard
                 key={item.id}
