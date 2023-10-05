@@ -18,7 +18,7 @@ const Hero = () => {
               </div>
               <h2 className="head_text">Hy! I Am</h2>
               <h1 className="orange_gradient my-4">Mohammad Suhail</h1>
-              {/* <span className="blue_gradient">
+              <span className="blue_gradient">
                 <TypeAnimation
                   sequence={[
                     "A Full Stack Developer",
@@ -34,7 +34,7 @@ const Hero = () => {
                   speed={50}
                   repeat={Infinity}
                 />
-              </span> */}
+              </span>
               <p className="desc">
                 A Full Stack Developer Developer with high level of experience
                 in web designing and development, producting the Quality work

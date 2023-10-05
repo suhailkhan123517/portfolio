@@ -70,7 +70,7 @@ const Register = () => {
 
   return (
     <>
-      <div className="flex bg-gray-50 items-center justify-center w-full mt-12 sm:px-16">
+      <div className="flex items-center justify-center w-full  sm:px-16">
         <div className="absolute w-full h-full top-0 left-0 bottom-0 right-0">
           <ParticlesContainer />
         </div>

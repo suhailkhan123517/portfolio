@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
-import { navLinks } from "@/utils/data";
 
 const capitalizeWords = (inputString) => {
   if (!inputString) return "";
@@ -25,7 +24,7 @@ const capitalizeWords = (inputString) => {
   return logoName;
 };
 
-const Navbar = () => {
+const TopBar = () => {
   const { status, data: session } = useSession();
   const [toggle, setToggle] = useState(false);
   const inputString = session?.user?.name;
@@ -33,8 +32,8 @@ const Navbar = () => {
   const router = useRouter();
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/30">
-        <div className="container  mx-auto">
+      <nav className="fixed top-0 left-0 w-full z-50 bg-[#edf2f8] border-b">
+        <div className="px-8">
           <div className="flex items-center justify-between py-3">
             <div>
               <Link href="/" className="flex items-center justify-center gap-3">
@@ -50,20 +49,12 @@ const Navbar = () => {
                 </p>
               </Link>
             </div>
-            <div>
-              <ul className="flex items-center gap-7 max-lg:hidden">
-                {navLinks.map((item) => (
-                  <li key={item.id}>
-                    <Link href={item.url} className="nav_links">
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+
             <div>
               {status === "authenticated" ? (
-                <div className="relative">
+                <div className="relative flex items-center justify-center gap-5">
+                  <button>Search Bar</button>
+
                   <div className="border-[3px] border-transparent rounded-full p-[2px] hover:border-gray-400  transition duration-200">
                     <Image
                       src={session?.user?.image || "/logo.svg"}
@@ -76,7 +67,7 @@ const Navbar = () => {
                   </div>
 
                   {toggle && (
-                    <div className="absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-gray-50 min-w-[210px] flex flex-col gap-2 justify-end items-start">
+                    <div className="absolute right-0 top-full mt-5 w-full p-5 rounded-lg bg-[#edf2f8] min-w-[210px] flex flex-col gap-2 justify-end items-start">
                       <Link
                         href="/profile"
                         className="text-sm font-inter text-gray-700 hover:text-gray-500 font-medium"
@@ -84,41 +75,7 @@ const Navbar = () => {
                       >
                         My Profile
                       </Link>
-                      <Link
-                        href="/dashboard"
-                        className="text-sm font-inter text-gray-700 hover:text-gray-500 font-medium"
-                        onClick={() => setToggle(false)}
-                      >
-                        Dashboard
-                      </Link>
-                      <Link
-                        href="/create-prompt"
-                        className="text-sm font-inter text-gray-700 hover:text-gray-500 font-medium md:hidden"
-                        onClick={() => setToggle(false)}
-                      >
-                        Services
-                      </Link>
-                      <Link
-                        href="/create-prompt"
-                        className="text-sm font-inter text-gray-700 hover:text-gray-500 font-medium md:hidden"
-                        onClick={() => setToggle(false)}
-                      >
-                        Work
-                      </Link>
-                      <Link
-                        href="/create-prompt"
-                        className="text-sm font-inter text-gray-700 hover:text-gray-500 font-medium md:hidden"
-                        onClick={() => setToggle(false)}
-                      >
-                        About
-                      </Link>
-                      <Link
-                        href="/create-prompt"
-                        className="text-sm font-inter text-gray-700 hover:text-gray-500 font-medium md:hidden"
-                        onClick={() => setToggle(false)}
-                      >
-                        Contact
-                      </Link>
+
                       <button
                         type="button"
                         className="mt-5 w-full black_btn rounded-full border border-black bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm font-inter flex items-center justify-center"
@@ -146,4 +103,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default TopBar;

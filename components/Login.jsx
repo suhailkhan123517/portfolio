@@ -31,14 +31,14 @@ const Login = () => {
         return;
       }
 
-      router.replace("/");
+      router.replace("/onboarding");
     } catch (error) {
       console.log(error);
     }
   };
   return (
     <>
-      <div className="flex bg-gray-50 items-center justify-center w-full sm:px-16 mt-12">
+      <div className="flex items-center justify-center w-full sm:px-16 ">
         <div className="absolute w-full h-full top-0 left-0 bottom-0 right-0">
           <ParticlesContainer />
         </div>
@@ -69,7 +69,7 @@ const Login = () => {
 
               <button
                 onClick={() => {
-                  signIn("github", { callbackUrl: "/" });
+                  signIn("github", { callbackUrl: "/onboarding" });
                 }}
                 className="mt-3 border border-gray-300 py-2 px-4 w-full flex items-center justify-between rounded-md hover:bg-gray-200 transition duration-300 group"
               >
@@ -85,7 +85,7 @@ const Login = () => {
               </button>
               <button
                 onClick={() => {
-                  signIn("google", { callbackUrl: "/" });
+                  signIn("google", { callbackUrl: "/onboarding" });
                 }}
                 className="mt-3 border border-gray-300 py-2 px-4 w-full flex items-center justify-between rounded-md hover:bg-gray-200 transition duration-300 group"
               >

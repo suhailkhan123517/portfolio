@@ -310,3 +310,46 @@ export const logoSlide = [
     img: "/spotify.png",
   },
 ];
+
+export const sidebarLinks = [
+  {
+    id: 1,
+    label: "Dashboard",
+    url: "/dashboard",
+  },
+  {
+    id: 2,
+    label: "Hero",
+    url: "/dashboard/hero",
+  },
+  {
+    id: 3,
+    label: "About",
+    url: "/dashboard/about",
+  },
+  {
+    id: 4,
+    label: "Services",
+    url: "/dashboard/services",
+  },
+  {
+    id: 5,
+    label: "Project",
+    url: "/dashboard/project",
+  },
+  {
+    id: 6,
+    label: "Testimonial",
+    url: "/dashboard/testimonial",
+  },
+  {
+    id: 7,
+    label: "Contact",
+    url: "/dashboard/contact",
+  },
+  {
+    id: 8,
+    label: "footer",
+    url: "/dashboard/footer",
+  },
+];
