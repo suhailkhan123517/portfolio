@@ -5,6 +5,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import GoogleProvider from "next-auth/providers/google";
 import GithubProvider from "next-auth/providers/github";
+import { signJwtToken } from "@/libs/jwt";
 
 export const authOptions = {
   providers: [
@@ -32,15 +33,27 @@ export const authOptions = {
 
           const passwordsMatch = await bcrypt.compare(password, user.password);
           if (!passwordsMatch) {
-            return null;
+            throw new Error("Invalid input");
+          } else {
+            const { password, ...currentUser } = user._doc;
+
+            const accessToken = signJwtToken(currentUser, { expiresIn: "6d" });
+
+            return {
+              ...currentUser,
+              accessToken,
+            };
           }
-          return user;
         } catch (error) {
           console.log("Error:", error);
         }
       },
     }),
   ],
+
+  pages: {
+    signIn: "/sign-in",
+  },
 
   callbacks: {
     async signIn({ user, account }) {
@@ -73,14 +86,22 @@ export const authOptions = {
 
       return user;
     },
-  },
 
-  session: {
-    strategy: "jwt",
-  },
-  secret: process.env.NEXTAUTH_SECRET,
-  pages: {
-    signIn: "/sign-in",
+    async jwt({ token, user }) {
+      if (user) {
+        token.accessToken = user.accessToken;
+        token.id = user.id;
+      }
+      return token;
+    },
+
+    async session({ session, token }) {
+      if (token) {
+        session.user.id = token.id;
+        session.user.accessToken = token.accessToken;
+      }
+      return session;
+    },
   },
 };
 

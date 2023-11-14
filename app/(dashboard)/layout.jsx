@@ -15,13 +15,15 @@ export default function dashboardLayout({ children }) {
       <body>
         <NextAuthProvider>
           <ToasterProvider />
-          <TopBar />
-          <main className="flex flex-row ">
-            <Sidebar />
-            <section className="flex min-h-screen flex-1 flex-col items-center  border-l px-6 pb-10 pt-28 max-md:pb-32 sm:px-5">
-              <div className="w-full max-w-5xl">{children}</div>
-            </section>
-          </main>
+          <div className="flex bg-[#f8f9fa]">
+            <div className="sidebar p-5 min-h-screen ">
+              <Sidebar />
+            </div>
+            <div className="content p-5">
+              <TopBar />
+              {children}
+            </div>
+          </div>
         </NextAuthProvider>
       </body>
     </html>

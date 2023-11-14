@@ -27,7 +27,7 @@ const Testimonial = () => {
                         src={testimonialsData[currentIndex].avatar}
                         alt="testimonial image"
                         fill={true}
-                        className="rounded-full"
+                        className="rounded-full object-cover"
                       />
                     </div>
                   </div>

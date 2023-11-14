@@ -9,9 +9,7 @@ import { navLinks } from "@/utils/data";
 const capitalizeWords = (inputString) => {
   if (!inputString) return "";
   const word = inputString.split(" ");
-  // Check if there are more than two words
   if (word.length > 2) {
-    // If more than two words, trim the array to the first two words
     word.length = 2;
   }
   const capitalizeWord = word.map((word) => {
@@ -27,6 +25,7 @@ const capitalizeWords = (inputString) => {
 
 const Navbar = () => {
   const { status, data: session } = useSession();
+  console.log(session);
   const [toggle, setToggle] = useState(false);
   const inputString = session?.user?.name;
   const capitalizedString = capitalizeWords(inputString);

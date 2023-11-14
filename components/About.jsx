@@ -26,7 +26,7 @@ const About = () => {
                   src="/about.webp"
                   alt="Portfolio About Image"
                   fill={true}
-                  className="rounded-2xl"
+                  className="rounded-2xl object-cover"
                 />
               </div>
             </div>
@@ -77,6 +77,56 @@ const About = () => {
                     </div>
                   </>
                 )}
+                {tab === "experience" && (
+                  <div className="mt-8">
+                    {experience.map((item) => (
+                      <>
+                        <div className="relative">
+                          <div
+                            key={item.id}
+                            className="border relative border-gray-200 hover:border-blue-600 bg-white shadow-xl lg:px-5 px-3 py-3 rounded-lg"
+                          >
+                            <div className="flex flex-row gap-5 my-1">
+                              <span className="py-[2px] px-3 bg-gradient-to-r  lg:text-sm text-[10px] from-blue-600 to-cyan-600 rounded-full text-white">
+                                {item.startDate}
+                              </span>
+
+                              <span className="py-[2px] px-3 bg-gradient-to-r  lg:text-sm text-[10px] from-blue-600 to-cyan-600 rounded-full text-white">
+                                {item.startEnd}
+                              </span>
+                            </div>
+                            <div className="flex flex-row items-center lg:gap-5 md:gap-0 gap-1 mt-2">
+                              <span className="xl:text-lg lg:text-base md:text-sm text-[12px] text-gray-600">
+                                Company :
+                              </span>
+                              <Link href="#">
+                                <span className="xl:text-lg lg:text-base md:text-sm text-[12px] text-black font-semibold hover:underline hover:text-blue-600">
+                                  {item.company}
+                                </span>
+                              </Link>
+                            </div>
+                            <div className="flex flex-row items-center gap-5 lg:mt-2 mt-1">
+                              <span className="xl:text-lg lg:text-base md:text-sm text-[12px] text-gray-600">
+                                Jop Title :
+                              </span>
+                              <span className="xl:text-lg lg:text-base md:text-sm text-[12px] text-black font-semibold mr-2">
+                                {item.jotTitle}
+                              </span>
+                            </div>
+                            <div className="flex flex-row gap-5 mt-2">
+                              <span className="xl:text-lg lg:text-base md:text-sm text-[12px] text-gray-600">
+                                Experience :
+                              </span>
+                              <span className="xl:text-lg lg:text-base md:text-sm text-[12px] text-black font-semibold mr-2">
+                                {item.year}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </>
+                    ))}
+                  </div>
+                )}
                 {tab === "educations" && (
                   <div className="mt-8 relative">
                     {education.map((item) => (
@@ -123,56 +173,6 @@ const About = () => {
                               </span>
                               <span className="text-blue-600  xl:text-lg lg:text-base md:text-sm text-[12px] font-semibold">
                                 {item.percentage}
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </>
-                    ))}
-                  </div>
-                )}
-                {tab === "experience" && (
-                  <div className="mt-8">
-                    {experience.map((item) => (
-                      <>
-                        <div className="relative">
-                          <div
-                            key={item.id}
-                            className="border relative border-gray-200 hover:border-blue-600 bg-white shadow-xl lg:px-5 px-3 py-3 rounded-lg"
-                          >
-                            <div className="flex flex-row justify-end gap-5 my-1">
-                              <span className="py-[2px] px-3 bg-gradient-to-r  lg:text-sm text-[10px] from-blue-600 to-cyan-600 rounded-full text-white">
-                                {item.startDate}
-                              </span>
-
-                              <span className="py-[2px] px-3 bg-gradient-to-r  lg:text-sm text-[10px] from-blue-600 to-cyan-600 rounded-full text-white">
-                                {item.startEnd}
-                              </span>
-                            </div>
-                            <div className="flex flex-row items-center lg:gap-5 md:gap-0 gap-1 mt-2">
-                              <span className="xl:text-lg lg:text-base md:text-sm text-[12px] text-gray-600">
-                                Company :
-                              </span>
-                              <Link href="#">
-                                <span className="xl:text-lg lg:text-base md:text-sm text-[12px] text-black font-semibold hover:underline hover:text-blue-600">
-                                  {item.company}
-                                </span>
-                              </Link>
-                            </div>
-                            <div className="flex flex-row items-center gap-5 lg:mt-2 mt-1">
-                              <span className="xl:text-lg lg:text-base md:text-sm text-[12px] text-gray-600">
-                                Jop Title :
-                              </span>
-                              <span className="xl:text-lg lg:text-base md:text-sm text-[12px] text-black font-semibold mr-2">
-                                {item.jotTitle}
-                              </span>
-                            </div>
-                            <div className="flex flex-row gap-5 mt-2">
-                              <span className="xl:text-lg lg:text-base md:text-sm text-[12px] text-gray-600">
-                                Experience :
-                              </span>
-                              <span className="xl:text-lg lg:text-base md:text-sm text-[12px] text-black font-semibold mr-2">
-                                {item.year}
                               </span>
                             </div>
                           </div>

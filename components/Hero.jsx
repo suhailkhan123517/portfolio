@@ -67,6 +67,7 @@ const Hero = () => {
                       src="/bg-img.jpg"
                       fill={true}
                       alt="Portfolio Banner"
+                      className="object-cover"
                     />
                   </div>
                 </div>

@@ -31,7 +31,7 @@ const Login = () => {
         return;
       }
 
-      router.replace("/onboarding");
+      router.replace("/dashboard");
     } catch (error) {
       console.log(error);
     }
@@ -69,7 +69,7 @@ const Login = () => {
 
               <button
                 onClick={() => {
-                  signIn("github", { callbackUrl: "/onboarding" });
+                  signIn("github", { callbackUrl: "/dashboard" });
                 }}
                 className="mt-3 border border-gray-300 py-2 px-4 w-full flex items-center justify-between rounded-md hover:bg-gray-200 transition duration-300 group"
               >
@@ -85,7 +85,7 @@ const Login = () => {
               </button>
               <button
                 onClick={() => {
-                  signIn("google", { callbackUrl: "/onboarding" });
+                  signIn("google", { callbackUrl: "/dashboard" });
                 }}
                 className="mt-3 border border-gray-300 py-2 px-4 w-full flex items-center justify-between rounded-md hover:bg-gray-200 transition duration-300 group"
               >
